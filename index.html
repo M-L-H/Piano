@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .pi {
+      background-color: #4e095f;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #fff;
+    }
+
+    #countup {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #fff;
+      color: #510953;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Paino</title>
+</head>
+<body>
+
+
+  <div class="pi" >
+    <h1>Piano ^_^</h1>
+
+    <button  onclick="appendToInput('a')" style="height: 400px;">ِِA</button>
+    <button  onclick="appendToInput('p')" style="height: 400px; margin-left: 20px;">B</button>
+    <button  onclick="appendToInput('s')" style="height: 400px; margin-left: 20px;">C</button>
+    <button  onclick="appendToInput('d')" style="height: 400px; margin-left: 20px;" >D</button>
+     <button  onclick="appendToInput('e')" style="height: 400px; margin-left: 20px;">E</button>
+      <button  onclick="appendToInput('f')" style="height: 400px; margin-left: 20px;">F</button>
+       <button  onclick="appendToInput('g')" style="height: 400px; margin-left: 20px;">G</button>
+  </div>
+  
+  <script>
+
+function appendToInput(note) {
+      const audio = new Audio(`piano/${note}.wav`);
+      audio.play();
+    }
+
+  </script>
+</body>
+</html>
+
